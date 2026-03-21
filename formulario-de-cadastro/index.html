@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de clientes</title>
+</head>
+
+<body>
+    <form class="cadastro-cliente" id="cadastro-cliente">
+        <h1>Formulário de cadastro de clientes</h1>
+        <Fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="nome">Nome completo:
+                    <input type="text" name="nome" id="nome" required form="cadastro-cliente">
+                </label>
+            </p>
+
+            <p>
+                <label for="cpf">CPF:
+                    <input type="text" id="cpf" name="cpf" required aria-describedby="cpf-ajuda" form="cadastro-cliente">
+                    <small class="hidden" id="cpf-ajuda">Digite apenas números</small>
+                </label>
+            </p>
+
+            <p>
+                <label for="data-nascimento">Data de nascimento:
+                    <input type="date" name="data-nascimento" id="data-nascimento" required form="cadastro-cliente">
+                </label>
+            </p>
+        </Fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <p>
+                <label for="cep">CEP:
+                    <input type="text" inputmode="numeric" name="cep" id="cep" required aria-describedby="cep-ajuda" form="cadastro-cliente">
+                    <small class="hidden" id="cep-ajuda">Digite apenas números</small>
+                </label>
+
+                <label for="estado">Estado
+                    <select id="estado" name="estado" required form="cadastro-cliente">
+                        <option value="">Selecione uma opção</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="ES">ES</option>
+                        <option value="MG">MG</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label for="rua">Rua:
+                    <input type="text" name="rua" id="rua" required form="cadastro-cliente">
+                </label>
+
+                <label>Numero da residência:
+                    <input type="text" name="numero" id="numero" required form="cadastro-cliente">
+                </label>
+            </p>
+
+            <p>
+                <label for="bairro">Bairro:
+                    <input type="text" name="bairro" id="bairro" required form="cadastro-cliente">
+                </label>
+
+                <label for="cidade">Cidade:
+                    <input type="text" name="cidade" id="cidade" required form="cadastro-cliente">
+                </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados para contato</legend>
+            <p>
+                <label for="telefone">Telefone:
+                    <input type="tel" name="telefone" id="telefone" aria-describedby="tel-ajuda" form="cadastro-cliente">
+                    <small class="hidden" id="tel-ajuda">Digite o telefone completo com DDD, utilize apenas números.</small>
+                </label>
+            </p>
+
+            <p>
+                <label for="email">Email:
+                    <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com.br" form="cadastro-cliente">
+                </label>
+            </p>
+        </fieldset>
+
+        <button aria-label="Concluir cadastro" type="submit">Cadastro</button>
+    </form>
+</body>
+
+</html>
