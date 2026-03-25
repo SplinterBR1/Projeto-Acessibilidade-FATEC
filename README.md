@@ -12,3 +12,6 @@
 - Utilizar atributos ARIA;
 - Navegação pelo teclado;
 - Passar em teste de acessibilidade.
+
+### Link para o site
+- https://splinterbr1.github.io/Projeto-Acessibilidade-FATEC/
