@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Projeto acessibilidade</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <h1>Projeto - Meu site acessível</h1>
+        <p>
+            Esta página se encontra em desenvolvimento para as atividades propostas nas aulas, com foco em semântica,
+            clareza estrutural e recursos de acessibilidade
+        </p>
+        <p>
+            Link para a <a href="tabela.html" aria-label="Ir para página contendo uma tabela de preços">Tabela Acessível</a>
+        </p>
+        <section aria-labelledby="titulo-principal">
+            <h2 id="titulo-principal">Formulário de cadastro de clientes</h2>
+            <p id="instrucoes-formulario">
+                Preencha corretamente todos os campos abaixo. <br> Os campos marcados como <span
+                    class="required">obrigatórios</span> devem ser
+                informados.
+            </p>
+            <form id="cadastro-cliente" aria-describedby="instrucoes-formulario" novalidate class="cadastro-cliente">
+
+                <Fieldset>
+                    <legend>Dados pessoais</legend>
+                    <p>
+                        <label for="nome">Informe seu nome completo (Obrigatório)
+                            <input type="text" name="nome" id="nome" required form="cadastro-cliente"
+                                aria-describedby="nome-erro">
+                            <small id="nome-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="cpf">Informe seu CPF ou RG (Obrigatório)
+                            <input type="text" id="cpf" name="cpf" required aria-describedby="cpf-erro"
+                                form="cadastro-cliente">
+                            <small id="cpf-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="data-nascimento">Data de nascimento (Obrigatório)
+                            <input type="date" name="data-nascimento" id="data-nascimento" required
+                                aria-describedby="data-erro" form="cadastro-cliente">
+                            <small id="data-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                </Fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <p>
+                        <label for="estado">Informe o Estado (Obrigatório)
+                            <select id="estado" name="estado" form="cadastro-cliente" aria-describedby="estado-erro">
+                                <optgroup label="Estados do Brasil">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="SP">SP</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="ES">ES</option>
+                                    <option value="MG">MG</option>
+                                </optgroup>
+                            </select>
+                            <small id="estado-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="cep">Informe o CEP (Obrigatório)
+                            <input type="text" inputmode="numeric" name="cep" id="cep" required
+                                aria-describedby="cep-erro" form="cadastro-cliente">
+                            <small id="cep-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="cidade">Informe a cidade (Obrigatório)
+                            <input type="text" name="cidade" id="cidade" required aria-describedby="cidade-erro"
+                                form="cadastro-cliente">
+                            <small id="cidade-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="bairro">Informe o bairro (Obrigatório)
+                            <input type="text" name="bairro" id="bairro" required aria-describedby="bairro-erro"
+                                form="cadastro-cliente">
+                            <small id="bairro-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="rua">Informe a rua (Obrigatório)
+                            <input type="text" name="rua" id="rua" required aria-describedby="rua-erro"
+                                form="cadastro-cliente">
+                            <small id="rua-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="numero">Informe o número da residência (Obrigatório)
+                            <input type="text" name="numero" id="numero" required aria-describedby="numero-erro"
+                                form="cadastro-cliente">
+                            <small id="numero-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Dados para contato</legend>
+                    <p>
+                        <label for="telefone">Telefone (Obrigatório)
+                            <input type="tel" name="telefone" id="telefone" aria-describedby="tel-erro"
+                                form="cadastro-cliente">
+                            <small id="tel-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="email">Email (Obrigatório)
+                            <input type="email" name="email" id="email" required aria-describedby="email-erro"
+                                form="cadastro-cliente">
+                            <small id="email-erro" class="erro" aria-live="polite"></small>
+                        </label>
+                    </p>
+                </fieldset>
+                <p class="aceita-termos">
+                    <label for="concordo" class="aceita-termos"> Confirmo que li e estou de acordo com o envio dos
+                        dados.
+                        <input type="checkbox" id="concordo" name="concordo" aria-describedby="concordo-erro" />
+                    </label>
+
+                </p>
+                <small id="concordo-erro" class="erro" aria-live="polite"></small>
+
+                <div class="botoes">
+                    <button aria-label="Concluir cadastro" type="submit">Cadastro</button>
+                    <button type="reset">Limpar campos</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="script/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Tabela Acessível</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Tabela de preços acessível</h1>
+
+        <p>
+            Página contendo uma tabela de preços, focada em semântica e acessibilidade para que as tecnologias
+            assistivas possam fazer a leitura adequada do conteúdo.
+        </p>
+
+        <p>
+            Link para a <a href="index.html" aria-label="Ir para página de cadastro de clientes">Página Inicial</a>
+        </p>
+
+        <section aria-labelledby="titulo">
+            <h2 id="titulo">Tabela de preços Steam - 08/04/2026</h2>
+
+            <p>
+                A tabela abaixo utiliza recursos como: título, cabeçalhos e organização simples.
+            </p>
+
+            <table>
+                <caption>
+                    Jogos em promoção na Steam até 15/04/2026
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Nome do jogo</th>
+                        <th scope="col">Valor original</th>
+                        <th scope="col">Valor da promoção</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Resident Evil 3 - Nêmesis (1999)</th>
+                        <td>R$ 57,00</td>
+                        <td>R$ 28,50</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Resident Evil 2 - Remake</th>
+                        <td>R$ 169,00</td>
+                        <td>R$ 42,25</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Resident Evil 4 - Remake</th>
+                        <td>R$ 169,00</td>
+                        <td>R$ 67,60</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

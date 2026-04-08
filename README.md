@@ -3,9 +3,11 @@
 
 ## Desafio — Acessibilidade com atribuitos ARIA
 - Cadastro de clientes com HTML semântico
+- Tabela acessível 
 
 ## Objetivo
 - Criar um formulário para cadastro de clientes 
+- Criar uma tabela acessível
 
 ### Requisitos
 - HTML semântico;
@@ -13,5 +15,6 @@
 - Navegação pelo teclado;
 - Passar em teste de acessibilidade.
 
-### Link para o site
+
+### Link para o site 
 - https://splinterbr1.github.io/Projeto-Acessibilidade-FATEC/
